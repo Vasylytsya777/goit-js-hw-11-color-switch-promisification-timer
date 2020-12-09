@@ -1,15 +1,15 @@
-/*Задание 1
-Напиши функцию delay(ms), которая возвращает промис, переходящий в состояние "resolved" через ms миллисекунд.
- Значением исполнившегося промиса должно быть то кол-во миллисекунд которое передали во время вызова функции delay. */
+// Завдання 1
+// Напиши функцію delay(ms), яка повертає проміс, що переходить в стан "resolved" через
+// ms мілісекунд.Значенням промісу, яке виповнилося має бути та кількість мілісекунд,
+// яку передали під час виклику функції delay.
 
 const delay = (ms) => {
-  // Твой код
   return new Promise((resolve) => setTimeout(resolve(ms)));
 };
 
 const logger = (time) => console.log(`Resolved after ${time}ms`);
 
-// Вызовы функции для проверки
+// Виклич функції для перевірки
 delay(2000).then(logger); // Resolved after 2000ms
 delay(1000).then(logger); // Resolved after 1000ms
 delay(1500).then(logger); // Resolved after 1500ms
